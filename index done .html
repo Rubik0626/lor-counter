@@ -164,6 +164,25 @@
                 diceResult.style.display = "none";
             }
         }
+
+        // 右側半分クリックで増加、左側半分クリックで減少
+        document.getElementById('blue').addEventListener('click', function(event) {
+            let width = event.target.offsetWidth;
+            if (event.offsetX > width / 2) {
+                changeValue('blue', 1);  // 右半分をクリックで増加
+            } else {
+                changeValue('blue', -1);  // 左半分をクリックで減少
+            }
+        });
+
+        document.getElementById('red').addEventListener('click', function(event) {
+            let width = event.target.offsetWidth;
+            if (event.offsetX > width / 2) {
+                changeValue('red', 1);  // 右半分をクリックで増加
+            } else {
+                changeValue('red', -1);  // 左半分をクリックで減少
+            }
+        });
     </script>
 </body>
 </html>
