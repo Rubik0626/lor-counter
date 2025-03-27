@@ -43,7 +43,12 @@
             transform: scale(1.05);
         }
         .red { background-color: #ff4c4c; color: white; }
-        .blue { background-color: #4c80ff; color: white; } /* 青を回転しないように修正 */
+        .blue { 
+            background-color: #4c93ff;
+            color: white;
+            transform: rotate(180deg); /* ここで青を180度回転 */
+            transition: none;
+        }
 
         .value-container {
             display: flex;
