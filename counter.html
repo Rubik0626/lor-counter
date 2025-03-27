@@ -42,10 +42,14 @@
         .half:hover {
             transform: scale(1.05);
         }
-        .red { background-color: #ff4c4c; color: white; }
-        .blue {
-            background-color: #4c99ff;
-            color: white;
+        .red { 
+            background-color: #ff4c4c; 
+            color: white; 
+        }
+        .blue { 
+            background-color: #4c9aff; 
+            color: white; 
+            transform: rotate(180deg); /* 180度回転させた状態 */
         }
 
         .value-container {
@@ -253,28 +257,6 @@
                 diceResult.style.display = "none";
             }
         }
-
-        document.getElementById('blue').addEventListener('click', function(event) {
-            if (event.target.tagName === "BUTTON") return;
-
-            let width = event.target.offsetWidth;
-            if (event.offsetX > width / 2) {
-                changeValue('blue', 1);
-            } else {
-                changeValue('blue', -1);
-            }
-        });
-
-        document.getElementById('red').addEventListener('click', function(event) {
-            if (event.target.tagName === "BUTTON") return;
-
-            let width = event.target.offsetWidth;
-            if (event.offsetX > width / 2) {
-                changeValue('red', 1);
-            } else {
-                changeValue('red', -1);
-            }
-        });
     </script>
 </body>
 </html>
